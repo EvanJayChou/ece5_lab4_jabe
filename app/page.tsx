@@ -20,12 +20,8 @@ export default function Home() {
         <p>Summary of foundational build steps: frame construction, drivetrain selection, sensor mounting, and initial wiring. Replace this placeholder text with your actual Chapter 1-2 submission highlights.</p>
         <div className="grid-images">
           <figure>
-            <Image src="/globe.svg" alt="Early Frame" width={300} height={200} />
-            <figcaption>Initial chassis mock-up.</figcaption>
-          </figure>
-          <figure>
-            <Image src="/window.svg" alt="Electronics Mount" width={300} height={200} />
-            <figcaption>Electronics mounting plate.</figcaption>
+            <Image src="./Robot_Assemble.jpg" alt="Early Frame" width={300} height={200} />
+            <figcaption>Initial robot assemble with breadboards and wiring.</figcaption>
           </figure>
         </div>
       </section>
