@@ -24,3 +24,104 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Layout helpers */
+.centered-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+section.content-block {
+  width: 100%;
+  background: rgba(0,0,0,0.03);
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+section.content-block h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+.grid-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.grid-images figure {
+  position: relative;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: .75rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+figure img, .annotated-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Annotation arrows */
+.annotated-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+}
+
+.annotation {
+  --arrow-color: #e53935;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-size: .75rem;
+  font-weight: 600;
+  background: #fff;
+  color: #222;
+  padding: .35rem .5rem;
+  border: 1px solid var(--arrow-color);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+  gap: .35rem;
+  white-space: nowrap;
+}
+
+.annotation::before {
+  content: "";
+  width: 34px;
+  height: 2px;
+  background: var(--arrow-color);
+  transform-origin: left center;
+}
+
+/* Example positional utility (will adjust inline) */
+.annotation.top-left { top: 8%; left: 6%; }
+.annotation.top-right { top: 10%; right: 8%; }
+.annotation.bottom-left { bottom: 12%; left: 10%; }
+.annotation.bottom-right { bottom: 18%; right: 12%; }
+
+@media (max-width: 640px) {
+  .centered-page { padding: 1.5rem 1rem 3rem; gap: 2.5rem; }
+  section.content-block { padding: 1.75rem 1.25rem; }
+  .annotation { font-size: .65rem; }
+  .annotation::before { width: 26px; }
+}
