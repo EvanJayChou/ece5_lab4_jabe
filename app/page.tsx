@@ -25,22 +25,24 @@ export default function Home() {
           </figure>
         </div>
       </section>
-      {/**
-      <section id="prototyping" className="content-block">
-        <h2>Prototyping Parts / Assembly</h2>
-        <p>Describe iterations of key subsystems (e.g., gripper, shooter, sensor brackets). Mention material choices and why certain prototypes were kept or discarded.</p>
-        <div className="grid-images">
-          <figure>
-            <Image src="/file.svg" alt="Prototype Part" width={300} height={200} />
-            <figcaption>Prototype component sample.</figcaption>
-          </figure>
-          <figure>
-            <Image src="/next.svg" alt="Assembly Stage" width={300} height={200} />
-            <figcaption>Assembly refinement.</figcaption>
-          </figure>
+
+      <section id="video" className="content-block">
+        <h2>Robot Following Line Video</h2>
+        <p>A short video of our test robot following a circular line.</p>
+        <div style={{position:'relative',width:'100%',maxWidth:720,padding:'0',display:'flex',flexDirection:'column',alignItems:'center',gap:'0.75rem'}}>
+          <div style={{position:'relative',width:'100%',paddingBottom:'56.25%',borderRadius:'12px',overflow:'hidden',boxShadow:'0 4px 12px rgba(0,0,0,0.25)'}}>
+            <iframe
+              src="https://www.youtube.com/embed/AOaCGNmPx2k" /* Use standard embed URL; replace ID if different */
+              title="Robot Following Line"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',border:0}}
+              allowFullScreen
+            />
+          </div>
         </div>
       </section>
-
+{/**
       <section id="final-robot" className="content-block">
         <h2>Final Competition Robot</h2>
         <p>Updated photos of the completed robot with annotations highlighting functional features.</p>
